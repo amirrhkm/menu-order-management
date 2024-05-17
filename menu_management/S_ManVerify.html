@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Manager Verification</title>
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+	
+	<style>
+	input {
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		border: solid 1px black;
+		padding: 5px;
+		background-color: white;
+		color: black;
+	}
+	
+	table {
+		border-spacing: 10px;
+		align: center;
+		text-align: center;
+		background-color: transparent;
+		border: 0px;
+		width: 50%;
+		padding: 0px;
+	}
+	
+	.btn199 {
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border: solid 1px black;
+		padding: 5px;
+		background-color: orange;
+		color: white;
+		width: 150px
+	}
+	
+	button {
+		background-color: white;
+		border: 0px;
+		color: white;
+	}
+	</style>
+	
+	<script type="text/javascript">
+		function validateForm() {
+			if (document.SManVerify.managerid.value == null || document.SManVerify.managerid.value == "") {
+				alert("Please enter manager ID");
+				return false;
+			}
+		}
+	</script>
+	
+</head>
+
+<body class="w3-black">
+<br><br><br><br>
+	<form name="SManVerify" method="post" action="S_ManVerify.jsp" onSubmit="return validateForm()">
+		<table align="center">
+			<tr><td style="color:white;"><h2>Access Verification</h2></td></tr>
+			<tr><td style="color:#525252;">Please enter manager ID</td></tr>
+			<tr><td style="color:black;">|</td></tr>
+			<tr><td style="color:black;">|</td></tr>
+			<tr><td style="color:white;">Manager ID</td></tr>
+			<tr><td><input name="managerid" type="text" style="width: 100px; background-color: #787878;"></td></tr>
+			<tr><td style="color:black;">|</td></tr>
+			<tr><td style="color:black;">|</td></tr>
+			<tr><td><input class="btn199" name="Back" type="button" value="Back" onclick="history.back()">
+					<input class="btn199" name="submit" type="submit" value="Verify"></td></tr>
+		</table>
+	</form>
+</body>
+</html>

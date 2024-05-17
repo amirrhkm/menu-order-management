@@ -1,0 +1,128 @@
+
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+<title>Main Menu</title>
+	<script type="text/javascript">
+		function validateForm() {
+			//COI validation [radio button]
+				var radios = document.getElementsByName("status");
+				var radioValidity = false;
+	
+				var i = 0;
+				while (!radioValidity && i<radios.length) {
+			        if (radios[i].checked) radioValidity = true;
+			        i++;
+				}
+				
+				if (!radioValidity) {
+					alert("Choose Dine-In or Takeaway!");
+					return radioValidity;
+				}
+			     
+		    //TableNo validation [drop-down menu]
+	        	var tableForm = document.getElementById("table");
+	        	var choice = tableForm.options[tableForm.selectedIndex].value;
+	        	var choiceContent = tableForm.options[tableForm.selectedIndex].text;
+	        	var ddValidity = false;
+	        	
+	        	if (choice == "0") {
+					alert("Please confirm your table number!");
+					return ddValidity;
+				}
+		}
+	</script>
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {
+			font-family: "Amatic SC", sans-serif;
+		}
+		
+		input {
+			-moz-border-radius: 15px;
+			border-radius: 15px;
+			border: solid 1px black;
+			padding: 10px;
+			background-color: #ffc421;
+		}
+		
+		var {
+			color:transparent;
+			cursor:default;
+		}
+		
+		table {
+			border: 1px solid black;
+			border-spacing: 15px;
+			font-size: 50px;
+			color: black;
+			background-color:white;
+		}
+		
+		.w3-jumbocustom {
+			font-size:128px!important;
+		}
+		
+		.button3 {
+			color: orange;
+			background-color: transparent;
+			border-color: transparent;
+			cursor: default;
+		}
+		
+		.w3-cpad {
+			padding-top:32px!important;
+			padding-bottom:32px!important;
+		}
+		
+		.w3-cc {
+			color:#ffc421!important;background-color:#ffc421!important;
+		}
+		
+	</style>
+</head>
+<body>
+		<!-- Start Content -->
+		<div id="home" class="menu-content">
+
+		<!-- Menu -->
+		<div id="menu" class="w3-container w3-black w3-xxlarge w3-padding-64">
+			<h1 class="w3-center w3-jumbocustom w3-padding-32">MAMAKHUT</h1>
+		
+		<!-- <div id="layer" class="w3-container w3-white w3-padding-32"></div>  -->
+		<div id="INPUT" class="w3-orange w3-cpad">
+		<form method="POST" action="W_Main.jsp" onSubmit="return validateForm()">
+			<table align="center">
+			<tr><th>Table No</th><td> : </td><td>
+				<select id="table" name="table_no">
+					<option name="num" value="0">-Select-</option>
+					<option name="num" value="1">1</option>
+					<option name="num" value="2">2</option>
+					<option name="num" value="3">3</option>
+					<option name="num" value="4">4</option>
+					<option name="num" value="5">5</option>
+					<option name="num" value="6">6</option>
+					<option name="num" value="7">7</option>
+					<option name="num" value="8">8</option>
+					<option name="num" value="9">9</option>
+					<option name="num" value="10">10</option>
+				</select></td></tr>
+			<tr><th></th><td></td><td>
+				<input type="radio" name="status" value="dinein"> Dine-In<br>
+				<input type="radio" name="status" value="takeaway"> Takeaway</td></tr>
+			<tr><td colspan="3" align="center"><input name = "Submit" type="submit" value="ORDER"></td></tr>
+			</table>
+		</form>
+		</div>
+		<!-- <div id="layer" class="w3-container w3-white w3-padding-32"></div>  -->
+		</div>
+		</div>
+			
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Account</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+<script type="text/javascript">
+function validateForm(){
+	if (document.myForm.firstname.value == null || document.myForm.firstname.value =="") {
+		alert("Please key-in first name");
+		return false;
+	}
+
+	if (document.myForm.lastname.value == null || document.myForm.lastname.value =="") {
+		alert("Please key-in last name");
+		return false;
+	}
+
+	if (document.myForm.staffid.value == null || document.myForm.staffid.value =="") {
+		alert("Please key-in staff id");
+		return false;
+	}
+
+	if (document.myForm.staffpos.value == null || document.myForm.staffpos.value =="") {
+		alert("Please key-in position");
+		return false;
+	}
+}
+</script>
+
+<style>
+form {text-align:center;}
+button {background-color:orange; color:white; border: none; padding: 10px 24px}
+h3, body {font-family:  Helvetica, sans-serif}
+table {width:35%;}
+
+input {
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		border: solid 1px black;
+		padding: 5px;
+		background-color: #525252;
+		color: white;
+	}
+	
+.it1 {
+		width:100%;
+		padding-bottom: 6px;
+}
+
+.itsubmit {
+		border-radius: 5px;
+		background-color: orange;
+		width:80%;
+		font-size:20px;
+		transition: 0.3s;
+}
+
+.itsubmit:hover {
+		background-color: white;
+		color: black;
+}
+
+img {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+::placeholder {
+  color: #787878;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #787878;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #787878;
+}
+</style>
+
+</head>
+<body class="w3-black">
+<button onclick="window.location.href='S_Menu.html'"> <b>Menu</b></button>
+	<form name ="myForm" action="S_Info.jsp" onSubmit="return validateForm()" method ="post">
+	<img src="https://cdn.wallpapersafari.com/94/3/CAB9ZE.jpg" alt="Show.jpg" width="450" height="450">
+	<h2><b>Create Account</b></h2><br/><br/>
+		<table align="center">
+		<tr><td><input class="it1" type="text" name="firstname" placeholder="  first name" /></td><td><input class="it1" type="text" name="lastname" placeholder="  last name" /></td></tr>
+		<tr><td colspan="3"><input class="it1" type="text" name="staffid" placeholder="  staff id" /></td></tr>
+		<tr><td><input class="it1" type="text" name="staffpos" placeholder="  position" /></td><td><input class="it1" type="text" name="hourlyrate" placeholder="  hourly rate" /></td></tr>
+		<tr><td colspan="3"><input class="it1" type="text" name="accnum" placeholder="  bank account number" /></td></tr>
+		<tr><td style="color:black">|</td></tr>
+		<tr><td colspan="4"><input class="itsubmit" type="submit" name="submit" value="Create Account" /></td></tr>
+		
+		</table>
+	</form>
+	<br><br><br><br><br><br><br><br>
+</body>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Main Menu</title>
+		<style>
+		
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  background-color:#000000;
+		  font-family: Helvetica, sans-serif;
+		}
+		
+		input {
+  		    -moz-border-radius: 15px;
+		    border-radius: 15px;
+    	    border:solid 1px black;
+    	 	padding:5px;
+    	}
+
+		.button {
+			background-color: #ffc421;
+			color: black;
+			padding: 15px 32px;
+			text-align: center;
+			margin: 4px 2px;
+			cursor: pointer;
+			width: 150px;
+ 			height: 50px;
+ 			line-height: 1.1em;
+		}
+		
+		.button2 {
+		  background-color: black;
+		  border: 2px solid;
+		  border-color: #ffc421;
+		  color: white;
+		  font-weight: bold;
+		  padding: 20px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  border-radius: 12px;
+		  height:200px;
+   		  width:200px;
+		  transition-duration: 0.4s;
+		}
+
+		.button2:hover {
+			background-color: white;
+			color: black;
+		}
+		
+
+    	
+		</style>
+	</head>
+	<body>
+	<h1 align="center" style="color:#ffc421">MENU MANAGEMENT SYSTEM</h1>
+	
+		<form method="post" action="M_productlist.jsp">
+			<table align="center" border=0px>
+				<tr>
+					<td><button class="button2" name="id%" value="%">ALL PRODUCTS</button></td>
+					<td><button class="button2" name="id%" value="R%">ROTI</button></td>
+					<td><button class="button2" name="id%" value="M%">MINUMAN</button></td>
+				</tr>
+				
+				<tr>
+					<td><button class="button2" name="id%" value="N%">NASI</button></td>
+					<td><button class="button2" name="id%" value="G%">GORENG</button></td>
+					<td><button class="button2" name="id%" value="D%">DESSERT</button></td>
+				</tr>
+				
+				<tr>
+				<td></td><td></td>
+				<td align="right"><button class="button" formaction="S_Menu.html">Exit</button></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+

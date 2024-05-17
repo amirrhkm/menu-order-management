@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Product</title>
+<script type="text/javascript">
+		function validateForm() {
+			if (document.addproduct.meal_id.value == null || document.addproduct.meal_id.value =="") {
+				alert("Please key-in meal ID");
+				return false;
+			}
+			if (document.addproduct.meal_name.value == null || document.addproduct.meal_name.value =="") {
+				alert("Please key-in meal name");
+				return false;
+			}
+			if (document.addproduct.takeaway_price.value == null || document.addproduct.takeaway_price.value =="") {
+				alert("Please key-in take away price");
+				return false;
+			}
+			if (document.addproduct.dinein_price.value == null || document.addproduct.dinein_price.value =="") {
+				alert("Please key-in dine in price");
+				return false;
+			}
+		}
+		</script>
+
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #000000;
+	font-family: Helvetica, sans-serif;
+}
+
+.button {
+	-moz-border-radius: 15px!important;
+	border-radius: 15px!important;
+	border: solid 1px black!important;
+	padding: 10px!important;
+	background-color: #ffc421!important;
+	color: black!important;
+	width: auto!important;
+}
+
+.button:hover {
+	background-color: white;
+	color: black;
+}
+
+input {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border: solid 1px black;
+	padding: 5px;
+	background-color: white;
+	color: black;
+	width: 100%;
+}
+
+.inputA {
+	height: auto;
+}
+
+table {
+	border-spacing: 10px;	
+}
+
+::placeholder {
+  color: #a6a6a6;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #a6a6a6;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #a6a6a6;
+}
+</style>
+</head>
+
+<body>
+	<form name="addproduct" action="M_addproduct.jsp" onSubmit="return validateForm()" method="post">
+		<h2 align="center" style="color: #ffc421">PRODUCT INFORMATION</h2>
+
+		<table align="center" border=0px style='color: white; width:20%;'>
+			<tr>
+				<td colspan="2"><input type="text" name="meal_id" placeholder="  meal id" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" name="meal_name" placeholder="  meal name" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" name="takeaway_price" placeholder="  takeaway price (RM)" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" name="dinein_price" placeholder="  dine-in price (RM)" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input class="inputA" type="text" name="meal_desc" placeholder="  meal description" /></td>
+			</tr>
+			<tr>
+				<td align="right"><input class="button" name="Back" type="button" value="Back" onclick="history.back()"></td>
+				<td align="left"><input class="button" name="Save" type="submit" value="Save"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
